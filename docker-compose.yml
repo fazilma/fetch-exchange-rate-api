@@ -6,19 +6,13 @@ volumes:
 
 services:
   django:
-    build:
-      context: .
-      dockerfile: ./compose/local/django/Dockerfile
-    image: my_awesome_project_local_django
+    build: .
     container_name: django
     depends_on:
       - postgres
       - redis
     volumes:
       - .:/api_service
-    env_file:
-      - ./.envs/.local/.django
-      - ./.envs/.local/.postgres
     ports:
       - "8000:8000"
     command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
@@ -38,4 +32,4 @@ services:
       image: redis:6.2-alpine
       ports:
         - 6379:6379
-      command: --name my-first-redis -d redis
+  
