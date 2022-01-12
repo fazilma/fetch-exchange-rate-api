@@ -23,6 +23,6 @@ app.conf.beat_schedule = {
     'fetch-rate-every-hour': {
         'task': 'fetch_rate_task',  
         # Schedule      
-        'schedule': 30.0,
+        'schedule': crontab(minute=0),
     }
 }
