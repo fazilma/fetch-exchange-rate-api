@@ -2,3 +2,11 @@
 .vscode/settings.json
 env/*
 postgres-data/*
+apirate/coinMena/__pycache__/*
+celerybeat-schedule.bak
+celerybeat-schedule.dat
+celerybeat-schedule.dir
+apirate/__pycache__/*
+apirate/__pycache__/celery.cpython-310.pyc
+apirate/__pycache__/settings.cpython-310.pyc
+apirate/__pycache__/urls.cpython-310.pyc

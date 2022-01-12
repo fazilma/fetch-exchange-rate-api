@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-w2c)+0ajofn$uplwhvp30#xt_f&@u#o10w(p+p-viu_6=cpsuz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apirate.coinMena',
     'rest_framework',
+    'rest_framework.authtoken',
     'celery',
 ]
 

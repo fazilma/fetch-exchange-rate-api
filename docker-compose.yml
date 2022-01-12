@@ -46,11 +46,15 @@ services:
     - POSTGRES_NAME=postgres
     - POSTGRES_USER=postgres
     - POSTGRES_PASSWORD=Pass2020!
+    volumes:
+      - .:/api_service
     depends_on:
       - redis
   celery-beat:
     build: .
     command: celery -A apirate beat -l info
+    volumes:
+      - .:/api_service
     environment:
     - POSTGRES_NAME=postgres
     - POSTGRES_USER=postgres

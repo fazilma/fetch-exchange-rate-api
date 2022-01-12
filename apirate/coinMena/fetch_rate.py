@@ -13,12 +13,12 @@ def fetch_rate():
     data = r.json()
     try:
         real_time_rate = data['Realtime Currency Exchange Rate']
-        model=ExchangeRate(from_currency_code = real_time_rate['1. From_Currency Code'],
+        model=ExchangeRate.objects.create(from_currency_code = real_time_rate['1. From_Currency Code'],
                     to_currency_code = real_time_rate['3. To_Currency Code'],
                     exchange_rate = real_time_rate['5. Exchange Rate'],
                     updated_at = real_time_rate['6. Last Refreshed'])
     
-    except:
-        pass
-    model.save()
+    except Exception as e:
+        print(e)
+    
     return model
