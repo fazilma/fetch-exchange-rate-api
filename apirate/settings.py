@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import environ
 from celery.schedules import crontab
+import os
 
 env = environ.Env()
 environ.Env.read_env()
@@ -30,7 +31,7 @@ SECRET_KEY = 'django-insecure-w2c)+0ajofn$uplwhvp30#xt_f&@u#o10w(p+p-viu_6=cpsuz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -90,9 +91,9 @@ DATABASES = {
 
         'USER': 'postgres',
 
-        'PASSWORD': env('DATABASE_PASSWORD'),
+        'PASSWORD': env('POSTGRES_PASSWORD'),
 
-        'HOST': 'localhost',
+        'HOST': 'postgres',
 
         'PORT': '5432',
 
@@ -141,5 +142,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_BROKER_URL = 'redis://redis:6379'
 CELERY_TIMEZONE = 'UTC'
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}

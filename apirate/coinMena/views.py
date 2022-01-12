@@ -7,10 +7,12 @@ from .serializers import ExchangeRateSerializer
 from rest_framework.views import APIView
 from apirate.coinMena import serializers
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 
 class ExchangeRateView(APIView):
     
     serializer_class = ExchangeRateSerializer
+    permission_classes = (IsAuthenticated,)
 
     def get(self, request):
         query_set = ExchangeRate.objects.order_by('updated_at').last()
