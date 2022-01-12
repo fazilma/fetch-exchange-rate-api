@@ -10,3 +10,14 @@ apirate/__pycache__/*
 apirate/__pycache__/celery.cpython-310.pyc
 apirate/__pycache__/settings.cpython-310.pyc
 apirate/__pycache__/urls.cpython-310.pyc
+apirate/__pycache__/celery.cpython-310.pyc
+apirate/__pycache__/settings.cpython-310.pyc
+apirate/__pycache__/urls.cpython-310.pyc
+apirate/coinMena/__pycache__/fetch_rate.cpython-310.pyc
+apirate/coinMena/__pycache__/models.cpython-310.pyc
+apirate/coinMena/__pycache__/tasks.cpython-310.pyc
+apirate/coinMena/__pycache__/views.cpython-310.pyc
+apirate/__pycache__/celery.cpython-310.pyc
+apirate/__pycache__/settings.cpython-310.pyc
+apirate/__pycache__/urls.cpython-310.pyc
+celerybeat-schedule.dir
