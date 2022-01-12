@@ -1,0 +1,7 @@
+[2022-01-12 12:22:27,526: INFO/MainProcess] beat: Starting...
+[2022-01-12 12:22:27,682: INFO/MainProcess] Scheduler: Sending due task fetch-rate-every-hour (fetch_rate_task)
+[2022-01-12 12:22:57,616: INFO/MainProcess] Scheduler: Sending due task fetch-rate-every-hour (fetch_rate_task)
+[2022-01-12 12:23:27,617: INFO/MainProcess] Scheduler: Sending due task fetch-rate-every-hour (fetch_rate_task)
+[2022-01-12 12:23:57,623: INFO/MainProcess] Scheduler: Sending due task fetch-rate-every-hour (fetch_rate_task)
+[2022-01-12 12:24:27,634: INFO/MainProcess] Scheduler: Sending due task fetch-rate-every-hour (fetch_rate_task)
+[2022-01-12 12:24:57,634: INFO/MainProcess] Scheduler: Sending due task fetch-rate-every-hour (fetch_rate_task)
