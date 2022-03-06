@@ -1,1 +1,12 @@
 
+This app is 
+
+Python | Programming language
+Django | framework
+Postgres | as DB
+Celery Beat | for scheduling repeated events
+Celery | asynhronous task
+Docker | Containerization
+Docker Compose | building the django image 
+
+
